@@ -12,11 +12,15 @@ function App() {
     { id: 'e4', title: 'New Desk (Wooden)', amount: 450, date: new Date(2022, 1, 9) },
   ];
 
+  const addExpenseHandler = expense =>  {
+    console.log('In App.js');
+    console.log(expense);
+  };
 
 
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses}/>
       <p>Esko Kuusela / VAMK / BIT</p>
     </div>
